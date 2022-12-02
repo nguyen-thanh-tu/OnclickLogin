@@ -3,8 +3,11 @@
     "description": "Login in Admin Magento 2",
     "type": "magento2-module",
     "autoload": {
+        "files": [
+            "registration.php"
+        ],
         "psr-4": {
-            "TUTJunior\\OnclickLogin\\": "src/"
+            "TUTJunior\\OnclickLogin\\": ""
         }
     },
     "authors": [
@@ -13,6 +16,5 @@
             "email": "nguyenthanhtu17032000@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "version": "1.0.0"
 }
