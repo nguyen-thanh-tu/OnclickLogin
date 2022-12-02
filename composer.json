@@ -20,5 +20,6 @@
             "email": "nguyenthanhtu17032000@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "version": "1.0.0"
 }
