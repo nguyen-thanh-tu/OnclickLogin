@@ -10,6 +10,10 @@
             "TUTJunior\\OnclickLogin\\": ""
         }
     },
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
     "authors": [
         {
             "name": "nguyen-thanh-tu",
