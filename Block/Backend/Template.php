@@ -27,9 +27,9 @@ class Template extends \Magento\Backend\Block\Template
         $this->scopeConfig = $scopeConfig;
         $this->_remoteAddress = $remoteAddress;
         $this->serializer = $serializer;
-        $allowsIpAddress = $this->scopeConfig->getValue('onclick_login/admin/allows_ip_address')
-            ?$this->serializer->unserialize($this->scopeConfig->getValue('onclick_login/admin/allows_ip_address'))
-            :[];
+        $allowsIpAddress = is_array($this->scopeConfig->getValue('onclick_login/admin/allows_ip_address'))
+            ?$this->scopeConfig->getValue('onclick_login/admin/allows_ip_address')
+            :$this->serializer->unserialize($this->scopeConfig->getValue('onclick_login/admin/allows_ip_address'));
         foreach($allowsIpAddress as $address)
         {
             $this->allowsIpAddress[] = $address['ip'];
