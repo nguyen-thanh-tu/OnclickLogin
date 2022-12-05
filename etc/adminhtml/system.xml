@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="tuntjunior" translate="label" sortOrder="200">
+            <label>TUTJunior</label>
+        </tab>
+        <section id="onclick_login" translate="label" type="text" sortOrder="40" showInDefault="1" showInStore="1" showInWebsite="1">
+            <label>Onclick Login</label>
+            <tab>tuntjunior</tab>
+            <resource>TUTJunior_OnclickLogin::config</resource>
+            <group id="admin" translate="label" type="text" sortOrder="5" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Admin</label>
+                <field id="user_name" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>User Name</label>
+                </field>
+                <field id="allows_ip_address" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allows Ip Address</label>
+                    <frontend_model>TUTJunior\OnclickLogin\Block\Adminhtml\Form\Field\AllowsIpAddress</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

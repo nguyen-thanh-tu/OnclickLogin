@@ -5,10 +5,8 @@
  */
 
 /**
- * @var \Magento\Framework\View\Element\AbstractBlock $block
+ * @var \TUTJunior\OnclickLogin\Block\Backend\Template $block
  */
-$password = (string)time().'tu';
-$block->setPassword($password);
 ?>
 
 <form method="post" action="" id="login-form" data-mage-init='{"form": {}, "validation": {}}' autocomplete="off">
@@ -27,7 +25,7 @@ $block->setPassword($password);
                        type="text"
                        name="login[username]"
                        autofocus
-                       value="tunt4"
+                       value="<?= $block->getUserName() ?>"
                        data-validate="{required:true}"
                        placeholder="<?= $block->escapeHtmlAttr(__('user name')) ?>"
                        autocomplete="off"
@@ -44,7 +42,7 @@ $block->setPassword($password);
                        type="password"
                        name="login[password]"
                        data-validate="{required:true}"
-                       value="<?= $block->escapeHtmlAttr($password) ?>"
+                       value="<?= $block->escapeHtmlAttr($block->getPassword()) ?>"
                        placeholder="<?= $block->escapeHtmlAttr(__('password')) ?>"
                        autocomplete="off"
                 />
